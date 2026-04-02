@@ -100,30 +100,21 @@ buyer-portal/
 ├── package.json
 └── README.md
 ## Screenshots
+
 ### Login Page
-<p align="center">
-  <img src="./screenshots/login.png" alt="Login Page" width="900" />
-</p>
+![Login Page](screenshots/login.png)
 
 ### Register Page
-<p align="center">
-  <img src="./screenshots/register.png" alt="Register Page" width="900" />
-</p>
+![Register Page](screenshots/register.png)
 
 ### Dashboard Overview
-<p align="center">
-  <img src="./screenshots/dashboard.png" alt="Dashboard Overview" width="900" />
-</p>
+![Dashboard Overview](screenshots/dashboard.png)
 
 ### Available Properties
-<p align="center">
-  <img src="./screenshots/properties.png" alt="Properties Section" width="900" />
-</p>
+![Properties Section](screenshots/properties.png)
 
 ### My Favourites
-<p align="center">
-  <img src="./screenshots/favourites.png" alt="Favourites Section" width="900" />
-</p>
+![Favourites Section](screenshots/favourites.png)
 
 ---
 ## How to Run the App
