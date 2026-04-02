@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buyer Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="dashboard-page">
+    <header class="top-nav">
+      <div class="nav-left">
+        <div class="brand-mark">🏡</div>
+        <div>
+          <h2>Buyer Portal</h2>
+          <p>Real Estate Favourites Dashboard</p>
+        </div>
+      </div>
+
+      <div class="nav-center">
+        <div class="nav-item active">Overview</div>
+        <div class="nav-item">Properties</div>
+        <div class="nav-item">Favourites</div>
+      </div>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+      <div id="globalMessage" class="message"></div>
+
+      <section class="hero-section">
+        <div class="hero-left panel-3d">
+          <p class="eyebrow">TechKraft Buyer Experience</p>
+          <h1>Welcome back, <span id="userName">Loading...</span></h1>
+          <p class="hero-text">
+            Manage your shortlisted real-estate properties in one secure and elegant dashboard experience.
+          </p>
+        </div>
+
+        <div class="hero-user-card panel-3d">
+          <p class="card-label">Account Overview</p>
+          <div class="hero-user-info">
+            <div class="avatar-circle">N</div>
+            <div>
+              <h3 id="profileName">Loading...</h3>
+              <p id="userEmail">Loading...</p>
+            </div>
+          </div>
+          <div class="role-badge" id="userRole">Loading...</div>
+        </div>
+      </section>
+
+      <section class="summary-cards">
+        <div class="summary-card primary-card panel-3d">
+          <p>Total Properties</p>
+          <h2 id="totalProperties">0</h2>
+          <span>Available listings in the portal</span>
+        </div>
+
+        <div class="summary-card panel-3d">
+          <p>My Favourites</p>
+          <h2 id="totalFavourites">0</h2>
+          <span>Properties saved by you</span>
+        </div>
+
+        <div class="summary-card panel-3d">
+          <p>Portal Access</p>
+          <h2 id="sidebarUserRole">buyer</h2>
+          <span>Authenticated user role</span>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <section class="panel panel-large panel-3d">
+          <div class="panel-header">
+            <div>
+              <p class="card-label">Listings</p>
+              <h2>Available Properties</h2>
+            </div>
+          </div>
+          <div id="propertiesList" class="properties-grid"></div>
+        </section>
+
+        <section class="panel panel-side panel-3d">
+          <div class="panel-header">
+            <div>
+              <p class="card-label">Saved</p>
+              <h2>My Favourites</h2>
+            </div>
+          </div>
+          <div id="favouritesList" class="favourites-list"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Buyer Portal</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card auth-card">
+      <div class="logo-badge">
+        <span class="logo-dot"></span>
+        TechKraft Buyer Portal
+      </div>
+
+      <h1>Welcome back</h1>
+      <h2>Log in to manage your favourite properties</h2>
+
+      <div id="message" class="message"></div>
+
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="niraj@example.com" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Login to Dashboard</button>
+      </form>
+
+      <p class="switch-link">
+        Don’t have an account? <a href="/register">Create one</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>

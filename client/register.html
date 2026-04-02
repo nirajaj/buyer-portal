@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Buyer Portal</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card auth-card">
+      <div class="logo-badge">
+        <span class="logo-dot"></span>
+        TechKraft Buyer Portal
+      </div>
+
+      <h1>Create your account</h1>
+      <h2>Start saving the properties you like in one place</h2>
+
+      <div id="message" class="message"></div>
+
+      <form id="registerForm">
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="niraj@example.com" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Minimum 6 characters" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Create Account</button>
+      </form>
+
+      <p class="switch-link">
+        Already have an account? <a href="/">Login here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/js/register.js"></script>
+</body>
+</html>
