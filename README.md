@@ -1,19 +1,36 @@
 # Buyer Portal – Auth + Favourites Dashboard
 
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-4.x-blue.svg)](https://expressjs.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-3.x-lightgrey.svg)](https://www.sqlite.org/)
+
 A full-stack buyer portal built as part of the **TechKraft Inc. Junior Full-Stack Engineer take-home assessment**.
 
 This application allows users to:
 
-- register with email and password
-- log in securely using JWT authentication
-- view their profile information
-- browse available properties
-- add and remove favourite properties
-- access only their own saved favourites
+- 🔐 Register with email and password
+- 🔑 Log in securely using JWT authentication
+- 👤 View their profile information
+- 🏠 Browse available properties
+- ❤️ Add and remove favourite properties
+- 🔒 Access only their own saved favourites
 
 ---
 
-## Features
+## 📋 Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation & Setup](#installation--setup)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+
+---
+
+## ✨ Features
 
 ### Authentication
 - User registration with validation
@@ -43,29 +60,48 @@ This application allows users to:
 
 ---
 
-## Tech Stack
+## 📸 Screenshots
 
-### Frontend
-- HTML
-- CSS
-- Vanilla JavaScript
+### Login Page
+![Login Page](screenshots/login.png)
 
-### Backend
-- Node.js
-- Express.js
+### Registration Page
+![Registration Page](screenshots/register.png)
 
-### Database
-- SQLite
+### Dashboard Overview
+![Dashboard](screenshots/dashboard.png)
 
-### Authentication & Security
-- JWT
-- bcryptjs
+### Properties List
+![Properties](screenshots/properties.png)
+
+### Favourites Management
+![Favourites](screenshots/favourites.png)
 
 ---
 
-## Project Structure
+## 🛠 Tech Stack
 
-```bash
+### Frontend
+- **HTML5** - Markup structure
+- **CSS3** - Styling and responsive design
+- **Vanilla JavaScript** - Client-side interactivity
+
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+
+### Database
+- **SQLite** - Lightweight database
+
+### Authentication & Security
+- **JWT** - JSON Web Tokens for authentication
+- **bcryptjs** - Password hashing
+
+---
+
+## 📁 Project Structure
+
+```
 buyer-portal/
 ├── client/
 │   ├── css/
@@ -99,127 +135,153 @@ buyer-portal/
 ├── .env
 ├── package.json
 └── README.md
-## Screenshots
-
-### Login Page
-![Login Page](screenshots/login.png)
-
-### Register Page
-![Register Page](screenshots/register.png)
-
-### Dashboard Overview
-![Dashboard Overview](screenshots/dashboard.png)
-
-### Available Properties
-![Properties Section](screenshots/properties.png)
-
-### My Favourites
-![Favourites Section](screenshots/favourites.png)
-
----
-## How to Run the App
-
-### 1. Clone the repository
-```bash
-git clone <your-github-repo-url>
-cd buyer-portal
-
-### 2. Install dependencies
-```bash
-npm install
-
-### 3. Create environment file
-Create a `.env` file in the root directory with the following values:
-
-```env
-PORT=5000
-JWT_SECRET=your_secret_key_here
-
-### 4. Start the development server
-```bash
-npm run dev
-
-### 5. Open in browser
-Visit:
-
-```bash
-http://localhost:5000
-
-## Example User Flow
-
-1. Register a new account
-2. Log in using your registered email and password
-3. View your buyer dashboard
-4. Browse available properties
-5. Add a property to favourites
-6. View saved favourites
-7. Remove a property from favourites
+```
 
 ---
 
-## API Endpoints
+## 🚀 Installation & Setup
 
-### Auth Routes
-- `POST /api/auth/register` – Register a user
-- `POST /api/auth/login` – Login user
-- `GET /api/auth/me` – Get authenticated user info
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd buyer-portal
+   ```
 
-### Property Routes
-- `GET /api/properties` – Get all properties
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### Favourite Routes
-- `GET /api/favourites` – Get logged-in user's favourites
-- `POST /api/favourites` – Add property to favourites
-- `DELETE /api/favourites/:propertyId` – Remove property from favourites
+3. **Set up environment variables**
+   - Create a `.env` file in the root directory
+   - Add your JWT secret:
+     ```
+     JWT_SECRET=your-secret-key-here
+     ```
 
----
+4. **Start the server**
+   ```bash
+   npm start
+   ```
 
-## Security Considerations
-
-- Passwords are never stored in plain text
-- Passwords are hashed using **bcrypt**
-- Protected routes require a valid JWT token
-- Users can only access and modify their own favourites
-- Server-side validation is implemented for authentication and favourite actions
-
----
-
-## Database Design
-
-### `users`
-- `id`
-- `name`
-- `email`
-- `password_hash`
-- `role`
-- `created_at`
-
-### `properties`
-- `id`
-- `title`
-- `location`
-- `price`
-- `description`
-- `created_at`
-
-### `favourites`
-- `id`
-- `user_id`
-- `property_id`
-- `created_at`
+5. **Open in browser**
+   - Navigate to `http://localhost:3000` (or your configured port)
 
 ---
 
-## Notes
+## 📖 Usage
 
-- Sample properties are seeded automatically on initial startup
-- SQLite is used for simplicity and quick local setup
-- The UI is designed to be clean, modern, and responsive
+1. **Register** a new account on the registration page
+2. **Login** with your credentials
+3. **Browse properties** on the dashboard
+4. **Add/remove favourites** by clicking the heart icon
+5. **View your favourites** in the dedicated section
 
 ---
 
-## Author
+## 🔗 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login user
+
+### Properties
+- `GET /api/properties` - Get all properties
+
+### Favourites
+- `GET /api/favourites` - Get user's favourites
+- `POST /api/favourites` - Add property to favourites
+- `DELETE /api/favourites/:id` - Remove property from favourites
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## � Security Considerations
+
+✅ **Password Security**
+- Passwords are hashed using **bcrypt** (never stored in plain text)
+- Salt rounds configured for optimal security
+
+✅ **Authentication**
+- JWT tokens for stateless session management
+- Protected routes require valid token verification
+- Tokens expire for enhanced security
+
+✅ **Authorization**
+- Users can only access and modify **their own** favourites
+- Server-side validation prevents unauthorized access
+- Role-based access control implemented
+
+✅ **Data Validation**
+- Input validation on all endpoints
+- Server-side error handling
+- SQL injection prevention
+
+---
+
+## 📊 Database Design
+
+### `users` Table
+```sql
+- id (PRIMARY KEY)
+- name (VARCHAR)
+- email (VARCHAR UNIQUE)
+- password_hash (VARCHAR)
+- role (VARCHAR)
+- created_at (TIMESTAMP)
+```
+
+### `properties` Table
+```sql
+- id (PRIMARY KEY)
+- title (VARCHAR)
+- location (VARCHAR)
+- price (DECIMAL)
+- description (TEXT)
+- created_at (TIMESTAMP)
+```
+
+### `favourites` Table
+```sql
+- id (PRIMARY KEY)
+- user_id (FOREIGN KEY → users.id)
+- property_id (FOREIGN KEY → properties.id)
+- created_at (TIMESTAMP)
+```
+
+---
+
+## 📝 Notes
+
+- ✨ Sample properties are **seeded automatically** on initial startup
+- 📦 SQLite is used for simplicity and lightweight local deployment
+- 🎨 The UI is designed to be **clean, modern, and fully responsive**
+- 🔄 All API responses follow consistent JSON format
+- 🚀 Easy to scale and migrate to production databases (PostgreSQL, MySQL)
+
+---
+
+## 👨‍💻 Author
 
 **Niraj Yadav**
 
-Submitted for the **Junior Full-Stack Engineer Take-Home Assessment** at **TechKraft Inc.**
+Submitted for: **Junior Full-Stack Engineer Take-Home Assessment** @ **TechKraft Inc.**
+
+---
+
+## 📄 License
+
+This project is part of a take-home assessment and is not licensed for public use.
+
+---
+
+**Last Updated:** April 2026 | **Status:** Active Development ✨
